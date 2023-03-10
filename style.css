@@ -13,7 +13,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-.wrapper:hover .row{
+.wrapper:hover .headline{
     color:black;
 }
 .wrapper:hover .icon {
@@ -21,7 +21,20 @@ body{
     color:black;
 }
 
-.row{    
+.row{
+    text-align: center;
+}
+
+.row:hover .image>img{   
+    display: inline-block;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0px; 
+    transition: all 1s ease-in-out;
+}
+
+.headline{
     display: flex;
     justify-content: space-between;
     border-top: 1px solid;
@@ -31,9 +44,15 @@ body{
     color: #0059D9;
 }
 
-.row:active{
-    background: #02132b;
+.image{
+    width: 50%;
+    margin: 20px auto;
 }
+.image>img{
+    width: 0;
+    height: 0;
+}
+
 /* Icons  */
 .icon{
     display: none;
