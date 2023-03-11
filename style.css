@@ -1,12 +1,12 @@
 body{
     background: #F5F5EB;
     font-weight: 900;
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-family: "Open Sans", sans-serif;
 }
 
 .wrapper{    
-    margin: 2rem auto;
+    margin: 0px auto 1rem auto;
     width: 65%;
     display: flex;
     flex-direction: column;
@@ -42,14 +42,14 @@ body{
     transition: all 0.3s ease-in-out;
 }
 .radiobox:checked ~ .img_meme{
-    width: 50%;
+    width: 35%;
     padding-bottom: 1rem;
 }
 
 /* Icons  */
 .icon{
     display: none;
-    width: 2.4rem;
+    width: 1.4rem;
     transition: all 0.2s ease-in-out;
     background-image: url(images/add_FILL0_wght400_GRAD0_opsz48.svg);
     background-size: cover; 
@@ -58,21 +58,65 @@ body{
     display: block;
     transform: rotate(45deg);
 }
+.row:active{
+    opacity: 0.5;
+}
 
 @media (hover:hover) {
-    
     .accordion:hover .row .headline{
         color:black;
-    }
-    .row:hover .img_meme{
-        width: 50%;
-        padding-bottom: 1rem;
     }
     .accordion:hover .headline .icon {
         display: block;
     }
+    .accordion:not(:hover) .headline .icon{
+        display: none;
+    }
     .row:hover .headline .icon{
         transform: rotate(45deg);
     }
+    .row:hover .img_meme{
+        width: 35%;
+        padding-bottom: 1rem;
+    }
+}
 
+@media (min-width: 320px) { 
+    body{
+        font-size: 0.8rem;
+    }    
+    .wrapper{    
+        width: 85%;
+    }
+    .icon{
+        width: 1.1rem;
+    }    
+}
+@media (min-width: 520px) { 
+    body{
+        font-size: 1.2rem;
+    }
+    .icon{
+        width: 1.5rem;
+    }    
+}
+@media (min-width: 820px) { 
+    body{
+        font-size: 1.3rem;
+    } 
+    .wrapper{    
+        width: 50%;
+    }
+    .icon{
+        width: 1.6rem;
+    }
+}
+@media (min-width: 1920px) { 
+    body{
+        font-size: 3rem;
+    }
+
+    .icon{
+        width: 3.4rem;
+    }
 }
