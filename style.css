@@ -7,18 +7,20 @@ body{
 
 .wrapper{    
     margin: 2rem auto;
-    width: 65%;    
+    width: 65%;
     display: flex;
     flex-direction: column;
 }
 
 .row{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     border-top: 0.1rem solid;
     border-color: #D8DEE3;
 }
-.row > input{ 
+
+.radiobox{ 
     visibility: hidden;
     display: none;
 }
@@ -26,36 +28,29 @@ body{
 .headline{
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;    
+    padding: 1rem 0px;
     color: #0059D9;
 }
-.row > input:checked ~ .headline{  
-    color: black;
-}
-.wrapper:hover .headline{
+.accordion:hover .row .headline{
     color:black;
 }
-
-.image{
-    width: 50%;
-    margin: 0px auto;
+.radiobox:checked + .headline{  
+    color: black;
 }
-.image>img{
+
+/* Image */
+.img_meme{
+    margin: 0px auto;
     width: 0;
-    height: 0;
     transition: all 0.3s ease-in-out;
 }
-.row:hover .image>img{
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0px; 
-    transition: all 0.4s ease-in-out;
+.row:hover .img_meme{
+    width: 50%;
+    padding-bottom: 1rem;
 }
-.row > input:checked ~ .image>img{
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0px; 
-    transition: all 0.4s ease-in-out;
+.radiobox:checked ~ .img_meme{
+    width: 50%;
+    padding-bottom: 1rem;
 }
 
 /* Icons  */
@@ -66,13 +61,13 @@ body{
     background-image: url(images/add_FILL0_wght400_GRAD0_opsz48.svg);
     background-size: cover; 
 }
-.row > input:checked ~ .headline > .icon{
+.radiobox:checked + .headline .icon{
     display: block;
     transform: rotate(45deg);
 }
-.wrapper:hover .headline > .icon {
+.accordion:hover .headline .icon {
     display: block;
 }
-.row:hover .headline > .icon{
+.row:hover .headline .icon{
     transform: rotate(45deg);
 }
