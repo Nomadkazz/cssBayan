@@ -44,19 +44,19 @@ body{
 .image>img{
     width: 0;
     height: 0;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .row:hover .image>img{
     width: 100%;
     height: 100%;
     padding: 1rem 0px; 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .row > input:checked ~ .image>img{
     width: 100%;
     height: 100%;
     padding: 1rem 0px; 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Icons  */
