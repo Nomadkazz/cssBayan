@@ -82,6 +82,7 @@ body{
         padding-bottom: 1rem;
     }
 }
+
 /* Responsive media breakpoints  */
 @media (min-width: 320px) { 
     body{
@@ -106,8 +107,14 @@ body{
     }    
 }
 @media (min-width: 820px) { 
+    body{
+        font-size: 1.3rem;
+    }   
     .wrapper{    
         width: 50%;
+    } 
+    .icon{
+        width: 1.3rem;
     } 
     .radiobox:checked ~ .img_meme{
         width: 35%;
