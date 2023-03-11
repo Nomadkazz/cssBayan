@@ -6,8 +6,8 @@ body{
 }
 
 .wrapper{    
-    margin: auto;
-    width: 70%;    
+    margin: 2rem auto;
+    width: 65%;    
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +20,6 @@ body{
 }
 .row > input{ 
     visibility: hidden;
-    position: absolute;
     display: none;
 }
 
@@ -44,38 +43,35 @@ body{
 .image>img{
     width: 0;
     height: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .row:hover .image>img{
     width: 100%;
     height: 100%;
     padding: 1rem 0px; 
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .row > input:checked ~ .image>img{
     width: 100%;
     height: 100%;
     padding: 1rem 0px; 
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 /* Icons  */
 .icon{
     display: none;
+    width: 2.4rem;
     transition: all 0.2s ease-in-out;
+    background-image: url(images/add_FILL0_wght400_GRAD0_opsz48.svg);
+    background-size: cover; 
 }
 .row > input:checked ~ .headline > .icon{
     display: block;
-    width: 2.4rem;
-    background-image: url(images/add_FILL0_wght400_GRAD0_opsz48.svg);
-    background-size: cover;
     transform: rotate(45deg);
 }
 .wrapper:hover .headline > .icon {
     display: block;
-    width: 2.4rem;
-    background-image: url(images/add_FILL0_wght400_GRAD0_opsz48.svg);
-    background-size: cover; 
 }
 .row:hover .headline > .icon{
     transform: rotate(45deg);
