@@ -4,6 +4,7 @@ body{
     font-size: 0.8rem;
     font-family: "Open Sans", sans-serif;
     overflow: scroll;
+    letter-spacing: -0.05em;
 }
 
 .wrapper{    
@@ -68,7 +69,7 @@ body{
         color:black;
     }
     .accordion:hover .headline .icon {
-        background-image: url(images/plus-thick.svg);
+        background-image: url(assets/images/plus-thick.svg);
         background-size: cover; 
     }
     .accordion:not(:hover) .headline .icon{
@@ -100,21 +101,21 @@ body{
 }
 @media (min-width: 520px) { 
     body{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     .icon{
-        width: 1.3rem;
+        width: 1.4rem;
     }    
 }
 @media (min-width: 820px) { 
     body{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }   
     .wrapper{    
         width: 50%;
     } 
     .icon{
-        width: 1.3rem;
+        width: 1.4rem;
     } 
     .radiobox:checked ~ .img_meme{
         width: 35%;
