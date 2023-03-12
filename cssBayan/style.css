@@ -1,0 +1,131 @@
+body{
+    background: #F5F5EB;
+    font-weight: 900;
+    font-size: 0.8rem;
+    font-family: "Open Sans", sans-serif;
+    overflow: scroll;
+    letter-spacing: -0.05em;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{    
+    margin: 0px auto 1rem auto;
+    width: 85%;
+}
+
+.row{
+    cursor: pointer;
+    border-top: 0.1rem solid;
+    border-color: #D8DEE3;
+}
+.row:active{
+    opacity: 0.5;
+}
+
+.radiobox{
+    display: none;
+}
+
+.headline{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0px;
+    color: #0059D9;
+    transition: all 0.3s ease-in-out;
+}
+.radiobox:checked ~ .headline{  
+    color: #000000;
+}
+
+/* Image */
+.img_meme{
+    margin: 0px auto;
+    width: 0;
+    transition: all 0.4s ease-in-out;
+}
+.radiobox:checked ~ .img_meme{
+    width: 35%;
+    padding-bottom: 1rem;
+}
+
+/* Icons  */
+.icon{
+    width: 1.1rem;
+    aspect-ratio: 1;
+    transition: all 0.4s ease-in-out;
+    background-image: none;
+    margin: auto 0px;
+}
+.radiobox:checked + .headline .icon{
+    transform: rotate(45deg);
+}
+
+@media (hover:hover) {
+    .accordion:hover .row .headline{
+        color:#000000;
+    }
+    .accordion:hover .headline .icon {
+        background-image: url(assets/images/plus-thick.svg);
+        background-size: cover; 
+    }
+    .accordion:not(:hover) .headline .icon{
+        background-image: none;
+    }
+    .row:hover .headline .icon{
+        transform: rotate(45deg);
+    }
+    .row:hover .img_meme{
+        width: 35%;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Responsive media breakpoints  */
+@media (min-width: 320px) { 
+    body{
+        font-size: 0.8rem;
+    }    
+    .wrapper{    
+        width: 85%;
+    }
+    .icon{
+        width: 0.8rem;
+    }  
+    .radiobox:checked ~ .img_meme{
+        width: 50%;
+    }  
+}
+@media (min-width: 520px) { 
+    body{
+        font-size: 1.4rem;
+    }
+    .icon{
+        width: 1.4rem;
+    }    
+}
+@media (min-width: 820px) { 
+    body{
+        font-size: 1.4rem;
+    }   
+    .wrapper{    
+        width: 50%;
+    } 
+    .icon{
+        width: 1.4rem;
+    } 
+    .radiobox:checked ~ .img_meme{
+        width: 35%;
+    }  
+}
+@media (min-width: 1920px) { 
+    body{
+        font-size: 3rem;
+    }
+    .icon{
+        width: 3.4rem;
+    }
+}
