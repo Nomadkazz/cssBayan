@@ -7,23 +7,26 @@ body{
     letter-spacing: -0.05em;
 }
 
-.wrapper{    
-    margin: 0px auto 1rem auto;
-    width: 85%;
+.flex-column{
     display: flex;
     flex-direction: column;
 }
 
+.wrapper{    
+    margin: 0px auto 1rem auto;
+    width: 85%;
+}
+
 .row{
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
     border-top: 0.1rem solid;
     border-color: #D8DEE3;
 }
+.row:active{
+    opacity: 0.5;
+}
 
-.radiobox{ 
-    visibility: hidden;
+.radiobox{
     display: none;
 }
 
@@ -34,8 +37,8 @@ body{
     color: #0059D9;
     transition: all 0.3s ease-in-out;
 }
-.radiobox:checked + .headline{  
-    color: black;
+.radiobox:checked ~ .headline{  
+    color: #000000;
 }
 
 /* Image */
@@ -60,13 +63,10 @@ body{
 .radiobox:checked + .headline .icon{
     transform: rotate(45deg);
 }
-.row:active{
-    opacity: 0.5;
-}
 
 @media (hover:hover) {
     .accordion:hover .row .headline{
-        color:black;
+        color:#000000;
     }
     .accordion:hover .headline .icon {
         background-image: url(assets/images/plus-thick.svg);
